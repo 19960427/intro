@@ -1,0 +1,89 @@
+﻿@charset "utf-8";
+@import url(reset.css);
+
+		body{font-family:'Baloo Bhaina 2';}
+		#wrapper{width:1000px; margin:0 auto;}
+
+	/* 레이아웃 + hover*/
+		#header{width:100%; position:relative;}
+		#contents{ padding:10px 0 30px 0;}
+		#footer{clear:both; background:pink; text-align:center;}
+		section { position:relative; width:100%; }		
+		article { float:left; height:230px; margin:10px; border-radius:15px 0; text-align:center;}
+			.bga{ width:200px; height:485px; background:url(../images/me.jpg) no-repeat;}
+			.bga:hover {background:url(../images/me2.jpg) no-repeat; transition:all 0.5s;}
+			.bga span{opacity:0; font-size:40px; }
+			.bga:hover span{color:#fff; opacity:1; transform:scale(1); animation:aaa 2s 0s infinite;}
+			
+			@keyframes aaa{
+			0%{opacity:0.1; }	
+			50%{opacity:1; }	
+			100%{opacity:0.1; }	
+			}
+			
+			.video { width:420px;}	
+			.video:hover{transform:scale(1.4); transition:all 0.5s;}
+
+			.txt1 { width:300px; background:url(../images/main1.png); box-sizing:border-box;}
+			.txt1 em{opacity:0; color:white; }
+			.txt1 strong{color:white; opacity:0.9;}
+			.txt1:hover { width:300px; background:pink;}
+			.txt1:hover em{opacity:1; transform:scale(1)}
+			.txt1:hover strong{transition:all 0.5s; color:black;}
+			
+			.txt2 { width:300px; height:230px; box-sizing:border-box; transition:all 1s;}	
+			.txt2 em{position:absolute; left:270px; transform:scale(1.8); opacity:0;	transition:all 0.6s; font-size:24px;}	
+			
+			.txt2:hover{background:pink; }
+			.txt2:hover em{color:#fff; opacity:1; transform:scale(1)}
+		
+			
+			
+			.bgb { width:420px; height:230px; border:1px solid #888; background:url(../images/MH.jpg) no-repeat center center;}	
+			.bgb:hover {background:url(../images/MH2.jpg) no-repeat center center; transition:all 0.5s;}	
+			
+			strong{font-size:32px;}
+			
+			
+			
+			article  { transition:all 0.5s; animation:scale 1s 1;} /* 레이아웃의 article에 추가할 내용 */
+			article:nth-child(1){animation:none;}
+			@keyframes scale {
+				0% { transform:scale(0); }	
+				100% { transform:scale(1); }
+			}
+			
+		/* text박스 */
+			
+		
+	/* header */ 
+		#header h1 { margin:30px 400px 0;}
+		#header h1 a{display:inline-block; background:url(../images/logo.png) no-repeat; width:150px; height:100px;}
+		
+		#gnb { }
+		#gnb li { display:inline;}
+		#gnb li a { font:bold 20px/3 'Baloo Bhaina 2'; color:#222; box-sizing:border-box; text-align:left; margin:0px 80px; }
+		#gnb li a:hover{border-bottom:5px solid pink;}
+		#gnb li a:nth-of-type(1) { margin-left:100px;}
+		
+	
+		#snsSet { position:absolute; top:80px; right:120px;}
+		#snsSet li { float:left; margin-right:30px; }
+		#snsSet .fab,#snsSet .far { font-size:25px; color:pink; opacity:0.8; transform:scale(1); }
+		#snsSet .fab:hover, #snsSet .far:hover { font-size:25px; opacity:1; color:#d191ff; transition:all 0.5s; }
+		
+	/* contents */
+	/* 동영상 */
+.vid { opacity:0.9; autoplay:muted;}
+.vid video {width:100%; }
+
+em{color:#999;}
+
+#contents:after{content:""; display:block; clear:both;}
+
+
+
+	/* footer */
+	#footer li{display:inline; color:white; }
+	#footer li a{margin:0 5px; color:white; }
+	address{font-size:10px; color:#eee;}
